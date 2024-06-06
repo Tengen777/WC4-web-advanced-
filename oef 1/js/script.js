@@ -16,4 +16,17 @@ document.addEventListener("DOMContentLoaded", () => {
             });
     });
 
-    
+    function compareNumber(nr) {
+        return new Promise((resolve, reject) => {
+            if (isNaN(nr) || nr < 1 || nr > 20) {
+                reject("Dat is geen geldig nummer (Fout)");
+            } else if (nr < targetNumber) {
+                resolve("Het mysterieuze getal is hoger. Raad nog eens!");
+            } else if (nr > targetNumber) {
+                resolve("Het mysterieuze getal is lager. Raad nog eens!");
+            } else {
+                resolve("Je hebt het mysterieuze nummer geraden!");
+            }
+        });
+    }
+});
