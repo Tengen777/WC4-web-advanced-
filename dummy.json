@@ -1,0 +1,4 @@
+{
+    "apikey": "&apikey=somekey",
+    "baseurl": "http://www.omdbapi.com/?"
+}
