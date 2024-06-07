@@ -10,8 +10,9 @@ async function getConfig(){
 
 window.onload = ()=> {
     console.log('loaded');
-    //getConfig();  // of await config
-    
+    getConfig();  // of await config
+    loadCounter();
+
 function loadCounter(){
     let counter = localStorage.getItem('counter');
     if (counter) {
@@ -44,11 +45,11 @@ function addCounterButton(runtime) {
 
     function showMovieOnCard(movie){
         //DOM Manipulation
-        document.getElementById('movie-title').innerText = movie.Ttle;
+        document.getElementById('movie-title').innerText = movie.Title;
         console.log(movie); 
         document.getElementById('movie-plot').innerText = movie.Plot;
         document.getElementById('movie-release').innerText = movie.Released;
-        document.getElementById('movie-poster').setAttribute('src', movie-Poster);
+        document.getElementById('movie-poster').setAttribute('src', movie.Poster);
         addCounterButton(parseInt(movie.Runtime))
         // Show the card
         document.getElementById('card').style.display = 'block'; 
