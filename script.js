@@ -10,7 +10,7 @@ async function getConfig(){
 
 window.onload = ()=> {
     console.log('loaded');
-    getConfig();  // of await config
+    //getConfig();  // of await config
     
 function loadCounter(){
     let counter = localStorage.getItem('counter');
@@ -24,6 +24,16 @@ function saveCounter() {
     localStorage.setItem('counter', counter);
 }
 
+function addCounterButton(runtime) {
+    let button = document.createElement('button');
+    button.innerHTML = '+';
+    button.addEventListener('click', function() {
+        counter += runtime;
+        document.getElementById('moviecounter').innerText = counter;
+        saveCounter();
+    });
+    document.getElementById('buttonContainer').appendChild(button);
+}
 
     async function getData(searchparameter){
         let url = `${config.baseurl}t=${searchparameter}${config.apikey}`; 
@@ -39,6 +49,7 @@ function saveCounter() {
         document.getElementById('movie-plot').innerText = movie.Plot;
         document.getElementById('movie-release').innerText = movie.Released;
         document.getElementById('movie-poster').setAttribute('src', movie-Poster);
+        addCounterButton(parseInt(movie.Runtime))
         // Show the card
         document.getElementById('card').style.display = 'block'; 
     }
@@ -56,6 +67,5 @@ let submitForm = event=> {
 
 //event listener for the form
 document.getElementById('searchform').addEventListener('submit',submitForm);
-
-document.getElementById('card').style.display = 'none'; 
+//deleted line??
 }
