@@ -1,6 +1,6 @@
 let config = null;
 let counter = 0;
-let baseurl = 'http://www.omdbapi.com/?';
+let baseurl = 'http://www.omdbapi.com/?t=batman&y=2014';
 let apikey = '&apikey=88ee00b3';
 
 async function getConfig(){
