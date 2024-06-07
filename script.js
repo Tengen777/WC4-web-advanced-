@@ -1,7 +1,7 @@
 let config = null;
 
 async function getConfig(){
-    let resp = await fetch('config.json');
+    let resp = await fetch('dummy.json');
     let data = await resp.json();
     config = data; // 2 properties 
 }
@@ -9,7 +9,7 @@ async function getConfig(){
 
 window.onload = ()=> {
     console.log('loaded');
-    getConfig();
+    getConfig();  // of await config
 
     async function getData(searchparameter){
         let url = `${config.baseurl}t=${searchparameter}${config.apikey}`; 
