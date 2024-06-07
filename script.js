@@ -12,7 +12,7 @@ window.onload = ()=> {
     console.log('loaded');
     getConfig();  // of await config
     
-loadCounter() {
+function loadCounter(){
     let counter = localStorage.getItem('counter');
     if (counter) {
         counter = parseInt(counter, 10);
