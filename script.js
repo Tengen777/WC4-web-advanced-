@@ -1,7 +1,7 @@
 let config = null;
 let counter = 0;
-let baseurl: 'http://www.omdbapi.com/?';
-let apikey: '&apikey=88ee00b3';
+let baseurl = 'http://www.omdbapi.com/?';
+let apikey = '&apikey=88ee00b3';
 
 async function getConfig(){
     let resp = await fetch('dummy.json');
