@@ -1,4 +1,5 @@
 let config = null;
+let counter = 0; 
 
 async function getConfig(){
     let resp = await fetch('dummy.json');
@@ -10,6 +11,19 @@ async function getConfig(){
 window.onload = ()=> {
     console.log('loaded');
     getConfig();  // of await config
+    
+loadCounter() {
+    let counter = localStorage.getItem('counter');
+    if (counter) {
+        counter = parseInt(counter, 10);
+        document.getElementById('moviecounter').innerText = counter;
+    }
+};
+
+function saveCounter() {
+    localStorage.setItem('counter', counter);
+}
+
 
     async function getData(searchparameter){
         let url = `${config.baseurl}t=${searchparameter}${config.apikey}`; 
@@ -28,6 +42,7 @@ window.onload = ()=> {
         // Show the card
         document.getElementById('card').style.display = 'block'; 
     }
+
 
 let submitForm = event=> {
     event.preventDefault();
