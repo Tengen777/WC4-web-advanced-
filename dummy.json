@@ -1,4 +1,11 @@
 {
     "apikey": "&apikey=88ee00b3",
-    "baseurl": "http://www.omdbapi.com/?"
+    "baseurl": "http://www.omdbapi.com/?t=batman&y=2014",
+    "Title": "Batman: Assault on Arkham",
+    "Year": "2014",
+    "Rated": "PG-13",
+    "Released": "29 Jul 2014",
+    "Runtime": "76 min",
+    "Genre": "Animation, Action, Adventure, Crime, Sci-Fi, Thriller",
+    "Poster": "https://m.media-amazon.com/images/M/MV5BZDU1ZGRiY2YtYmZjMi00ZDQwLWJjMWMtNzUwNDMwYjQ4ZTVhXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SX300.jpg"
 }
